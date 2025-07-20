@@ -1,0 +1,34 @@
+package com.demo;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/submitform")
+public class Student extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String fname=request.getParameter("fullname");
+		String email =request.getParameter("email");
+		String uname=request.getParameter("username");
+		String pass=request.getParameter("password");
+		String mobNo=request.getParameter("phone");
+		Integer.parseInt(mobNo);
+		
+		System.out.println(fname);
+		System.out.println(email);
+		System.out.println(uname);
+		System.out.println(pass);
+		System.out.println(mobNo);
+		
+		PrintW response.getWriter();
+		
+	}
+	
+}

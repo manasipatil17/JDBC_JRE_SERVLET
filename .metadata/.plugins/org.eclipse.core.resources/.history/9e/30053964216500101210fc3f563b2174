@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Employee Registration Form</h2>
+    <form action="submitform" method="post">
+      <!-- 1 -->
+      <label for="empId">Employee ID:</label>
+      <input type="text" id="empId" name="empId" required />
+
+      <!-- 2 -->
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required />
+
+      <!-- 3 -->
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required />
+
+      <!-- 4 -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <!-- 5 -->
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <!-- 6 -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <!-- 7 -->
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">--Select--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- 8 -->
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <!-- 9 -->
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required />
+
+      <!-- 10 -->
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required />
+
+      <!-- 11 -->
+      <label for="pin">PIN Code:</label>
+      <input type="text" id="pin" name="pin" required />
+
+      <!-- 12 -->
+      <label for="department">Department:</label>
+      <input type="text" id="department" name="department" required />
+
+      <!-- 13 -->
+      <label for="position">Position:</label>
+      <input type="text" id="position" name="position" required />
+
+      <!-- 14 -->
+      <label for="joiningDate">Joining Date:</label>
+      <input type="date" id="startDate" name="startDate" required />
+
+      <!-- 15 -->
+      <label for="salary">Salary ($):</label>
+      <input type="number" id="salary" name="salary" min="0" required />
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

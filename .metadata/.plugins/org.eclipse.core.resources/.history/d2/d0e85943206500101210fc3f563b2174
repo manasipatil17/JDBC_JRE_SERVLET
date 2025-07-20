@@ -1,0 +1,10 @@
+package com.demo;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+
+@WebServlet("/submitform")
+public class Employee extends HttpServlet{
+
+	
+}
