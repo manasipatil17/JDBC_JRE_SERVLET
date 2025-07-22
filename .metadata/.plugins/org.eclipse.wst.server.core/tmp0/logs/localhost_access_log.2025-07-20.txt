@@ -31,3 +31,7 @@
 0:0:0:0:0:0:0:1 - - [20/Jul/2025:10:46:18 +0530] "POST /Servlet_EmployeeCRUD/submitform HTTP/1.1" 200 177
 127.0.0.1 - - [20/Jul/2025:10:48:32 +0530] "GET / HTTP/1.1" 404 752
 0:0:0:0:0:0:0:1 - - [20/Jul/2025:10:48:32 +0530] "GET /Servlet_EmployeeCRUD/submitform HTTP/1.1" 405 752
+127.0.0.1 - - [20/Jul/2025:10:49:48 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [20/Jul/2025:10:49:48 +0530] "GET /Servlet_EmployeeCRUD/style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [20/Jul/2025:10:50:39 +0530] "POST /Servlet_EmployeeCRUD/submitform HTTP/1.1" 200 177
+0:0:0:0:0:0:0:1 - - [20/Jul/2025:10:50:40 +0530] "POST /Servlet_EmployeeCRUD/submitform HTTP/1.1" 200 177
