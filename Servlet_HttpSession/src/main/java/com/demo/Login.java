@@ -13,6 +13,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/login")
 public class Login extends HttpServlet {
@@ -33,10 +34,11 @@ public class Login extends HttpServlet {
 
 			if (rs.next()) {
 				out.print("<h1>" + "LOGIN Successfully..." + "</h1>");
+				HttpSession session= req.getSession();
 				
-				req.setAttribute("sname", rs.getString(1));
-				req.setAttribute("email", rs.getString(2));
-				req.setAttribute("MobNo", rs.getString(4));
+				session.setAttribute("sname", rs.getString(1));
+				session.setAttribute("email", rs.getString(2));
+				session.setAttribute("MobNo", rs.getString(4));
 				
 				RequestDispatcher rd = req.getRequestDispatcher("/Profile.jsp");
 				rd.include(req, resp);
