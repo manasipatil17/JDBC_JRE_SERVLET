@@ -19,7 +19,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/ViewFeedback")
+@WebServlet("/Admin_dashboard")
 public class Admin_dashboard extends HttpServlet{
 
 	@Override
@@ -41,6 +41,8 @@ public class Admin_dashboard extends HttpServlet{
                 feedback.put("date_submitted", rs.getTimestamp("date_submitted"));
                 feedback.put("profile_photo", rs.getString("profile_photo"));
                 feedbackList.add(feedback);
+                
+                System.out.println("Number of feedbacks fetched: " + feedbackList.size());
             }
 
             req.setAttribute("feedbackList", feedbackList);

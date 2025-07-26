@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  <%@ page import="java.util.*" %>
+<%
+    List<Map<String, Object>> feedbackList = (List<Map<String, Object>>) request.getAttribute("feedbackList");
+%>  
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>All Feedbacks</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
-
 </head>
 <body>
 <div class="container mt-5">
@@ -24,20 +27,26 @@
 </thead>
 
 <tbody>
-<c:forEach var="fb" items="${feedbackList}">
-                <tr>
-                   <td><c:out value="${fb.id}" /></td>
-                    <td>
-                        <img src="${fb.profile_photo}" alt="Profile" width="50" height="50" style="border-radius: 50%;">
-                    </td>
-                    <td><c:out value="${fb.name}" /></td>
-                    <td><c:out value="${fb.email}" /></td>
-                    <td><c:out value="${fb.feedback_text}" /></td>
-                    <td><c:out value="${fb.date_submitted}" /></td>
-                </tr>
-            </c:forEach>
-        
-</tbody>
+<%
+    if (feedbackList != null && !feedbackList.isEmpty()) {
+        for (Map<String, Object> fb : feedbackList) {
+%>
+    <tr>
+        <td><%= fb.get("id") %></td>
+        <td><img src="<%= request.getContextPath() + "/" + fb.get("profile_photo") %>" width="50" height="50" style="border-radius: 50%;" /></td>
+        <td><%= fb.get("name") %></td>
+        <td><%= fb.get("email") %></td>
+        <td><%= fb.get("feedback_text") %></td>
+        <td><%= fb.get("date_submitted") %></td>
+    </tr>
+<%
+        }
+    } else {
+%>
+    <tr><td colspan="6">No feedback available</td></tr>
+<%
+    }
+%></tbody>
 </table>
 
 </div>
