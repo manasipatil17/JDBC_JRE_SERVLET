@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 <title>All Feedbacks</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="Style.css">
 </head>
 <body>
 <div class="container mt-5">

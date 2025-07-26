@@ -60,7 +60,7 @@ public class RegisterServlet extends HttpServlet {
 		    
 		    int rows = ps.executeUpdate();
             if (rows > 0) {
-                resp.sendRedirect("login.jsp");
+                resp.sendRedirect("Login.jsp");
             } else {
                 resp.getWriter().println("Registration failed.");
             }
