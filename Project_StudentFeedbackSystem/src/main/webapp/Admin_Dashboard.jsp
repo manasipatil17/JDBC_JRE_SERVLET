@@ -48,7 +48,10 @@
     }
 %></tbody>
 </table>
-
+           <div>
+                
+                <a href="Login.jsp" class="btn btn-danger">Logout</a>
+            </div>
 </div>
 </body>
 </html>

@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
         if (rs.next()) {
             HttpSession session = req.getSession();
             session.setAttribute("admin", true);
-            resp.sendRedirect("admin_dashboard.jsp");
+            resp.sendRedirect("Admin_Dashboard");
         } else {
         	req.setAttribute("errorMsg", "Invalid credentials, Register here first");
         	req.getRequestDispatcher("Register.jsp").forward(req, resp);
