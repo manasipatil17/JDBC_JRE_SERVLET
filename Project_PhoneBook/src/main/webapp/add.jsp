@@ -16,7 +16,6 @@
 <input type="tel" placeholder="Phone" name="phone"  class="form-control mb-2" required>
 <input type="email" placeholder="Email" name="email"  class="form-control mb-2" required>
 <input type="date" placeholder="DOB" name="dob"  class="form-control mb-2" required>
-
 <button type="submit" class="btn btn-success w-100">Save</button>
 
 

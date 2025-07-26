@@ -57,8 +57,13 @@ public class RegisterServlet extends HttpServlet {
 		    ps.setString(5, email);
 		    ps.setString(6, password);
 		    ps.setString(7, photoPath);
-		    ps.executeUpdate();
 		    
+		    int rows = ps.executeUpdate();
+            if (rows > 0) {
+                resp.sendRedirect("login.jsp");
+            } else {
+                resp.getWriter().println("Registration failed.");
+            }
 		    
 		} catch (SQLException e) {
 			
