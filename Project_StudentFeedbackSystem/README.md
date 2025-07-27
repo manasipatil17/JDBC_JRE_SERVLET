@@ -23,37 +23,29 @@ Server: Apache Tomcat
 🗄️ Database Schema
 
 students Table
-+---------------+--------------+------+-----+---------+----------------+
-| Field         | Type         | Null | Key | Default | Extra          |
-+---------------+--------------+------+-----+---------+----------------+
-| id            | int          | NO   | PRI | NULL    | auto_increment |
-| name          | varchar(150) | YES  |     | NULL    |                |
-| course        | varchar(150) | YES  |     | NULL    |                |
-| gender        | varchar(10)  | YES  |     | NULL    |                |
-| phone         | bigint       | YES  |     | NULL    |                |
-| email         | varchar(150) | YES  | UNI | NULL    |                |
-| password      | varchar(155) | YES  |     | NULL    |                |
-| profile_photo | varchar(255) | YES  |     | NULL    |                |
-+---------------+--------------+------+-----+---------+----------------+
+Field	Type	Key	Description
+id	INT	PK	Auto-increment primary key
+name	VARCHAR(150)		Student name
+course	VARCHAR(150)		Course enrolled
+gender	VARCHAR(10)		Gender
+phone	BIGINT		Contact number
+email	VARCHAR(150)	UNI	Unique email
+password	VARCHAR(155)		Login password (hashed)
+profile_photo	VARCHAR(255)		Path to profile photo
 
 feedback Table
-+----------------+----------+------+-----+-------------------+-------------------+
-| Field          | Type     | Null | Key | Default           | Extra             |
-+----------------+----------+------+-----+-------------------+-------------------+
-| id             | int      | NO   | PRI | NULL              | auto_increment    |
-| student_id     | int      | YES  | MUL | NULL              |                   |
-| feedback_text  | text     | YES  |     | NULL              |                   |
-| date_submitted | datetime | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
-+----------------+----------+------+-----+-------------------+-------------------+
+Field	Type	Key	Description
+id	INT	PK	Auto-increment feedback ID
+student_id	INT	FK	Reference to students(id)
+feedback_text	TEXT		Feedback content
+date_submitted	DATETIME		Default: current timestamp
 
 admin Table
-+----------+--------------+------+-----+---------+----------------+
-| Field    | Type         | Null | Key | Default | Extra          |
-+----------+--------------+------+-----+---------+----------------+
-| id       | int          | NO   | PRI | NULL    | auto_increment |
-| username | varchar(100) | YES  | UNI | NULL    |                |
-| password | varchar(255) | YES  |     | NULL    |                |
-+----------+--------------+------+-----+---------+----------------+
+Field	Type	Key	Description
+id	INT	PK	Auto-increment primary key
+username	VARCHAR(100)	UNI	Unique admin login
+password	VARCHAR(255)		Login password (hashed)
+
 
 
 mysql> create table students(id int auto_increment primary key,
