@@ -18,7 +18,7 @@
 <table class="table table-bordered table-hover">
 <thead class="table-dark">
 <tr>
-<th>Id</th>
+<!-- <th>Id</th>  -->
 <th>Photo</th>
 <th>Name</th>
 <th>Email</th>
@@ -33,7 +33,7 @@
         for (Map<String, Object> fb : feedbackList) {
 %>
     <tr>
-        <td><%= fb.get("id") %></td>
+       <!-- <td><%= fb.get("id") %></td>  --> 
         <td><img src="<%= request.getContextPath() + "/" + fb.get("profile_photo") %>" width="50" height="50" style="border-radius: 50%;" /></td>
         <td><%= fb.get("name") %></td>
         <td><%= fb.get("email") %></td>
