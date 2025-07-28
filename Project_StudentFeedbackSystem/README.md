@@ -11,16 +11,16 @@ A simple web-based Student Feedback System built using Java (JSP & Servlets) and
 
 👨‍💼 Admin Module
 
--Admin login
--View all feedback with student details
+- Admin login
+- View all feedback with student details
 
 
 🛠️ Tech Stack
 
--Frontend: HTML, CSS, JSP
--Backend: Java Servlets, JDBC
--Database: MySQL
--Server: Apache Tomcat
+- Frontend: HTML, CSS, JSP
+- Backend: Java Servlets, JDBC
+- Database: MySQL
+- Server: Apache Tomcat
 
 🗄️ Database Schema
 students Table
